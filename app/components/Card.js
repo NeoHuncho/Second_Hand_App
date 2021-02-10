@@ -10,7 +10,7 @@ export default function Card({ title, subTitle, image }) {
       <Image style={styles.image} source={image} />
       <View style={styles.textContainer}>
         <AppText style={styles.title}>{title}</AppText>
-        <AppText>{subTitle}</AppText>
+        <AppText style={styles.subTitle}>{subTitle}</AppText>
       </View>
     </View>
   );
@@ -20,6 +20,7 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     backgroundColor: colors.white,
     marginBottom: 20,
+    overflow:'hidden'
   },
   image: {
     width: "100%",
@@ -28,7 +29,12 @@ const styles = StyleSheet.create({
   textContainer:{
       padding:20
   },
+  subTitle:{
+      color:colors.secondary,
+      fontWeight:'bold'
+  },
   title:{
-      
+      marginBottom:7
+
   }
 });
